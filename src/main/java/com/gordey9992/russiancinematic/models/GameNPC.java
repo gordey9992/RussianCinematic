@@ -4,16 +4,16 @@ import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.*;
-import java.util.logging.Logger;
 
 public class GameNPC {
     
     private final String id;
     private final String name;
     private final Location location;
-    private final SkinType skinType;
+    private final String skinType;
     private final String displayName;
     private final List<String> dialogues;
     private final Map<String, String> commands;
@@ -21,7 +21,7 @@ public class GameNPC {
     
     private boolean isSpawned;
     
-    public GameNPC(String id, String name, Location location, SkinType skinType) {
+    public GameNPC(String id, String name, Location location, String skinType) {
         this.id = id;
         this.name = name;
         this.location = location;
@@ -140,13 +140,13 @@ public class GameNPC {
             
             // Устанавливаем кожу в зависимости от типа
             switch (skinType) {
-                case KNIGHT:
+                case "KNIGHT":
                     meta.setOwner("MHF_Steve");
                     break;
-                case WIZARD:
+                case "WIZARD":
                     meta.setOwner("MHF_Alex");
                     break;
-                case MERCHANT:
+                case "MERCHANT":
                     meta.setOwner("MHF_Villager");
                     break;
                 default:
@@ -177,12 +177,4 @@ public class GameNPC {
     public String getDisplayName() { return displayName; }
     public Location getLocation() { return location; }
     public boolean isSpawned() { return isSpawned; }
-}
-
-enum SkinType {
-    KNIGHT,
-    WIZARD, 
-    MERCHANT,
-    VILLAGER,
-    CUSTOM
 }
