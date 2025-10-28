@@ -1,0 +1,73 @@
+# RussianCinematic - Файл сообщений
+
+prefix: "&8[&6RC&8] &7"
+
+# Общие сообщения
+general:
+  no-permission: "&cУ вас нет прав для использования этой команды."
+  player-only: "&cЭту команду могут использовать только игроки."
+  usage: "&cИспользование: &6{usage}"
+  reload: "&aКонфигурация перезагружена."
+
+# Сообщения катсцен (без уведомлений о начале/конце)
+cinematic:
+  not-in-cutscene: "&cВы не находитесь в катсцене."
+  already-in-cutscene: "&cВы уже находитесь в катсцене."
+  cutscene-not-found: "&cКатсцена &6{cutscene} &cне найдена."
+  cutscene-skipped: "&eКатсцена пропущена."
+  
+  # Сообщения диалогов
+  dialogue:
+    click-to-continue: "&7▸ Нажмите ЛКМ чтобы продолжить"
+    space-to-skip: "&7▸ Нажмите ПРОБЕЛ чтобы пропустить"
+    choice-timeout: "&cВремя для выбора истекло."
+    invalid-choice: "&cНеверный выбор."
+    
+  # Сообщения выбора
+  choices:
+    title: "&6Выберите вариант:"
+    format: "&7{number}. &f{choice}"
+    selected: "&7Вы выбрали: &f{choice}"
+
+# Сообщения Telegram
+telegram:
+  bot-connected: "&aTelegram бот успешно подключен."
+  bot-disconnected: "&cTelegram бот отключен."
+  bot-error: "&cОшибка Telegram бота: &6{error}"
+  not-configured: "&cTelegram не настроен. Проверьте config.yml."
+  
+  # Форматы для игрового чата (когда сообщение приходит из Telegram)
+  from-telegram: "&8[&9TG&8] &b{user}&7: &f{message}"
+
+# Сообщения администратора
+admin:
+  config-reloaded: "&aКонфигурация перезагружена."
+  
+  # Статистика
+  stats:
+    title: "&6=== &eСтатистика RussianCinematic &6==="
+    cutscenes: "&7Катсцен: &f{count}"
+    telegram-connected: "&7Telegram: &aподключен"
+    telegram-disconnected: "&7Telegram: &cотключен"
+
+# Сообщения для игроков
+player:
+  welcome: "&6Добро пожаловать на сервер!"
+  first-join-cutscene: "&7Запускается вступительная катсцена..."
+  
+  # Помощь по командам
+  help:
+    title: "&6=== &eRussianCinematic - Помощь &6==="
+    cinematic-start: "&7/cinematic start [катсцена] &f- Начать катсцену"
+    cinematic-stop: "&7/cinematic stop &f- Остановить катсцену"
+    cinematic-skip: "&7/cinematic skip &f- Пропустить катсцену"
+    telegram-reload: "&7/telegram reload &f- Перезагрузить Telegram"
+    telegram-status: "&7/telegram status &f- Статус Telegram бота"
+
+# Сообщения консоли
+console:
+  plugin-enabled: "RussianCinematic успешно включен!"
+  plugin-disabled: "RussianCinematic выключен."
+  telegram-connected: "Telegram бот подключен к чату: {chat_id}"
+  telegram-error: "Ошибка подключения к Telegram: {error}"
+  chat-sync-enabled: "Синхронизация чата Minecraft <-> Telegram активирована"

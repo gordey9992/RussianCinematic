@@ -1,0 +1,48 @@
+# Пример катсцены для новых игроков
+cutscene:
+  name: "welcome"
+  display-name: "§6Вступительная катсцена"
+  duration: 120
+  skipable: true
+  
+  # NPC в катсцене
+  npcs:
+    - id: "elder"
+      name: "Старейшина"
+      skin: "MERCHANT"
+      location:
+        world: "world"
+        x: 100
+        y: 64
+        z: 200
+        yaw: 180
+        pitch: 0
+  
+  # Диалоги катсцены
+  dialogues:
+    - npc: "elder"
+      message: "Добро пожаловать в наш мир, путник!"
+      delay: 20
+      sound: "ENTITY.VILLAGER.AMBIENT"
+      
+    - npc: "elder"  
+      message: "Я расскажу тебе об основах этого мира..."
+      delay: 60
+      sound: "ENTITY.VILLAGER.YES"
+      
+    - npc: "elder"
+      message: "Удачи в твоих приключениях!"
+      delay: 40
+      sound: "ENTITY.VILLAGER.CELEBRATE"
+  
+  # Команды после катсцены
+  commands:
+    - "give {player} minecraft:bread 5"
+    - "give {player} minecraft:wooden_sword 1"
+    - "msg {player} &aТы получил стартовые предметы!"
+  
+  # Настройки камеры
+  camera:
+    smooth-transitions: true
+    shake-effect: false
+    fade-effects: true

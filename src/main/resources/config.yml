@@ -1,0 +1,75 @@
+# RussianCinematic - Основной конфигурационный файл
+
+settings:
+  debug: false
+  language: "ru"
+  auto-save: true
+
+# Настройки катсцен
+cinematic:
+  enabled: true
+  auto-scene-for-new-players: true
+  default-cutscene: "welcome"
+  dialogue-speed: 3
+  skip-on-click: true
+  
+  # Настройки NPC
+  npc:
+    show-names: true
+    name-format: "&e&l{npc_name}"
+    dialogue-format: "&7{npc_name}: &f{message}"
+    look-at-player: true
+    
+  # Настройки диалогов
+  dialogue:
+    type-speed: 2
+    show-choices: true
+    choice-timeout: 30
+    skip-with-space: true
+
+# Настройки Telegram
+telegram:
+  enabled: false
+  bot-token: "YOUR_BOT_TOKEN_HERE"
+  chat-id: "YOUR_CHAT_ID_HERE"
+  parse-mode: "HTML"
+  
+  # Форматы сообщений для Telegram
+  formats:
+    join: "+ {player}"
+    quit: "― {player}"
+    chat: "🎮 {player} » {message}"
+    server-start: "Сервер включен!"
+    
+  # Настройки синхронизации чата
+  sync:
+    # Minecraft -> Telegram
+    chat-to-telegram: true
+    # Telegram -> Minecraft
+    telegram-to-chat: true
+    join-notifications: true
+    quit-notifications: true
+    server-status-notifications: true
+    
+  # Настройки фильтрации чата
+  chat-filter:
+    enabled: true
+    min-length: 2
+    max-length: 256
+    blocked-words: []
+    allowed-formattings: ["color", "bold"]
+
+# Интеграция с EssentialsXChat
+integrations:
+  essentialsx:
+    enabled: true
+    use-essentials-chat: true
+    # Формат сообщений из Telegram в Minecraft
+    telegram-format: "&8[&9TG&8] &b{user}&7: &f{message}"
+
+# Настройки безопасности
+security:
+  anti-spam: true
+  spam-threshold: 3
+  command-cooldown: 1
+  block-commands-during-cutscene: true

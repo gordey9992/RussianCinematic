@@ -1,0 +1,67 @@
+name: RussianCinematic
+version: 1.0.0
+main: com.gordey9992.russiancinematic.RussianCinematic
+api-version: 1.21
+description: Плагин для создания катсцен и интеграции с Telegram
+author: gordey9992
+website: https://github.com/gordey9992/RussianCinematic
+
+commands:
+  cinematic:
+    description: Управление катсценами
+    usage: /<command> <start|stop>
+    aliases: [cs, cutscene]
+    permission: russiancinematic.cinematic.use
+  telegram:
+    description: Управление интеграцией с Telegram
+    usage: /<command> <reload|status>
+    aliases: [tg]
+    permission: russiancinematic.telegram.use
+
+permissions:
+  russiancinematic.*:
+    description: Полный доступ к RussianCinematic
+    children:
+      russiancinematic.admin: true
+      russiancinematic.user: true
+  russiancinematic.admin:
+    description: Административные права
+    default: op
+    children:
+      russiancinematic.cinematic.*: true
+      russiancinematic.telegram.*: true
+  russiancinematic.user:
+    description: Базовые права пользователя
+    default: true
+    children:
+      russiancinematic.cinematic.use: true
+  russiancinematic.cinematic.*:
+    description: Все права катсцен
+    children:
+      russiancinematic.cinematic.start: true
+      russiancinematic.cinematic.stop: true
+      russiancinematic.cinematic.use: true
+  russiancinematic.cinematic.start:
+    description: Запуск катсцен
+    default: op
+  russiancinematic.cinematic.stop:
+    description: Остановка катсцен
+    default: op
+  russiancinematic.cinematic.use:
+    description: Использование катсцен
+    default: true
+  russiancinematic.telegram.*:
+    description: Все права Telegram
+    children:
+      russiancinematic.telegram.reload: true
+      russiancinematic.telegram.status: true
+      russiancinematic.telegram.use: true
+  russiancinematic.telegram.reload:
+    description: Перезагрузка Telegram конфигов
+    default: op
+  russiancinematic.telegram.status:
+    description: Просмотр статуса Telegram бота
+    default: op
+  russiancinematic.telegram.use:
+    description: Использование Telegram команд
+    default: op
