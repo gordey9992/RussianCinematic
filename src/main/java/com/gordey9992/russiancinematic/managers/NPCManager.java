@@ -23,7 +23,7 @@ public class NPCManager {
         this.playerInteractions = new HashMap<>();
     }
     
-    public void createNPC(String id, String name, Location location, SkinType skinType) {
+    public void createNPC(String id, String name, Location location, String skinType) {
         GameNPC npc = new GameNPC(id, name, location, skinType);
         npcs.put(id, npc);
         
