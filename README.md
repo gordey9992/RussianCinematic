@@ -6,7 +6,6 @@
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.8-purple.svg)](https://www.minecraft.net/)
 [![Ядро](https://img.shields.io/badge/Purpur-1.21.8-purple.svg)](https://purpurmc.org/download/purpur/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://mit-license.org/)
-[![AIPlugin](https://img.shields.io/badge/AI_Minecraft-Plugin-purple.svg)](https://github.com/gordey9992/AI-Minecraft-Plugin/releases/)
 
 **Мощный плагин для катсцен и Telegram-интеграции**
 
